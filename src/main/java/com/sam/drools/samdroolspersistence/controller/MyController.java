@@ -1,8 +1,10 @@
 package com.sam.drools.samdroolspersistence.controller;
 
 import com.sam.drools.samdroolspersistence.entity.SessioninfoEntity;
+import com.sam.drools.samdroolspersistence.model.Fare;
 import com.sam.drools.samdroolspersistence.model.Order;
 import com.sam.drools.samdroolspersistence.model.Person;
+import com.sam.drools.samdroolspersistence.model.TaxiRide;
 import com.sam.drools.samdroolspersistence.service.ISessionService;
 import org.kie.api.runtime.KieSession;
 import org.kie.internal.runtime.StatefulKnowledgeSession;
@@ -36,6 +38,21 @@ public class MyController {
         session.insert(order);
         session.fireAllRules();
         return order;
+    }
+
+    @GetMapping("/taxi/{distance}/{is-night-surcharge}")
+    public Long getRideFare(@PathVariable Long distance,
+                            @PathVariable("is-night-surcharge") Boolean isNightSurcharge){
+        Fare rideFare = new Fare();
+        session.setGlobal("rideFare", rideFare);
+        TaxiRide taxiRide = new TaxiRide();
+        taxiRide.setDistanceInMile(distance);
+        taxiRide.isNightSurcharge(isNightSurcharge);
+        session.insert(taxiRide);
+        session.fireAllRules();
+//        session.dispose();
+        System.out.println("!! RIDE FARE !! " + rideFare.getTotalFare());
+        return rideFare.getTotalFare();
     }
 
     @GetMapping("/person/{name}/{to-compare-name}/{gender}")

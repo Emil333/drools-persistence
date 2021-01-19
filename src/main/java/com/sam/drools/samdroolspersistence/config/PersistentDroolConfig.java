@@ -29,7 +29,7 @@ import javax.persistence.Persistence;
 public class PersistentDroolConfig {
 
     public static final String UNIQUE_NAME = "jdbc/BitronixJTADataSource";
-    public static final String DRL_LOCATION = "rules/rules-template.drt";
+    public static final String DRL_LOCATION = "rules/TAXI_FARE_RULE.drl";
     public static Long KIE_SESSION_ID;
     private KieServices kieServices;
 
@@ -75,7 +75,6 @@ public class PersistentDroolConfig {
     public KieBase getKieBase() {
         KieFileSystem kieFileSystem = kieServices.newKieFileSystem();
         kieFileSystem.write(ResourceFactory.newClassPathResource(DRL_LOCATION));
-        //todo remove final if problem faced in rule templating
         KieRepository kieRepository = kieServices.getRepository();
 
         kieRepository.addKieModule(kieRepository::getDefaultReleaseId);
@@ -102,7 +101,7 @@ public class PersistentDroolConfig {
         ds.setAllowLocalTransactions(true);
         ds.getDriverProperties().put("user", "root");
         ds.getDriverProperties().put("password", "password");
-        ds.getDriverProperties().put("URL", "jdbc:mysql://localhost:3306/drool_demo");
+        ds.getDriverProperties().put("URL", "jdbc:mysql://localhost:3306/drools");
         ds.init();
     }
 }
