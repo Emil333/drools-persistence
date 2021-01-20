@@ -1,13 +1,13 @@
-package com.sam.drools.samdroolspersistence;
+package com.tech.drools.droolspersistence;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SamDroolsPersistenceApplication {
+public class DroolsPersistenceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SamDroolsPersistenceApplication.class, args);
+        SpringApplication.run(DroolsPersistenceApplication.class, args);
     }
 
 }

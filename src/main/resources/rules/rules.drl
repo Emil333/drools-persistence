@@ -1,5 +1,5 @@
-package com.sam.drools.samdroolspersistence;
-import com.sam.drools.samdroolspersistence.model.Order;
+package com.tech.drools.droolspersistence;
+import com.tech.drools.droolspersistence.model.Order;
 
 rule "Garbage collect rule"
 salience -100

@@ -1,6 +1,6 @@
-package com.sam.drools.samdroolspersistence.repository;
+package com.tech.drools.droolspersistence.repository;
 
-import com.sam.drools.samdroolspersistence.entity.SessioninfoEntity;
+import com.tech.drools.droolspersistence.entity.SessioninfoEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface DroolsSessionRepository extends JpaRepository<SessioninfoEntity, Long> {

@@ -1,13 +1,12 @@
-package com.sam.drools.samdroolspersistence.controller;
+package com.tech.drools.droolspersistence.controller;
 
-import com.sam.drools.samdroolspersistence.entity.SessioninfoEntity;
-import com.sam.drools.samdroolspersistence.model.Fare;
-import com.sam.drools.samdroolspersistence.model.Order;
-import com.sam.drools.samdroolspersistence.model.Person;
-import com.sam.drools.samdroolspersistence.model.TaxiRide;
-import com.sam.drools.samdroolspersistence.service.ISessionService;
+import com.tech.drools.droolspersistence.entity.SessioninfoEntity;
+import com.tech.drools.droolspersistence.model.Fare;
+import com.tech.drools.droolspersistence.model.Order;
+import com.tech.drools.droolspersistence.model.Person;
+import com.tech.drools.droolspersistence.model.TaxiRide;
+import com.tech.drools.droolspersistence.service.ISessionService;
 import org.kie.api.runtime.KieSession;
-import org.kie.internal.runtime.StatefulKnowledgeSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

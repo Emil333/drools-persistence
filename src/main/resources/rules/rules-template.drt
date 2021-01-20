@@ -3,9 +3,9 @@ gender
 toCompareName
 toCompareGender
 
-package com.sam.drools.samdroolspersistence;
+package com.tech.drools.droolspersistence;
 
-import com.sam.drools.samdroolspersistence.model.Person;
+import com.tech.drools.droolspersistence.model.Person;
 
 template "test_template"
     rule "Person_@{row.rowNumber}"

@@ -8,10 +8,10 @@
         <version>2.3.3.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.sam.drools</groupId>
-    <artifactId>sam-drools-persistence</artifactId>
+    <groupId>com.tech.drools</groupId>
+    <artifactId>emil-drools-persistence</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>sam-drools-persistence</name>
+    <name>emil-drools-persistence</name>
     <description>Demo project for Spring Boot with Drools</description>
 
     <properties>

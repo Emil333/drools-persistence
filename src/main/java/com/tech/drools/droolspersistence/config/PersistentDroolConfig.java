@@ -1,9 +1,7 @@
-package com.sam.drools.samdroolspersistence.config;
+package com.tech.drools.droolspersistence.config;
 
 import bitronix.tm.TransactionManagerServices;
 import bitronix.tm.resource.jdbc.PoolingDataSource;
-import com.sam.drools.samdroolspersistence.entity.SessioninfoEntity;
-import com.sam.drools.samdroolspersistence.service.ISessionService;
 import org.kie.api.KieBase;
 import org.kie.api.KieServices;
 import org.kie.api.builder.KieBuilder;
@@ -17,10 +15,8 @@ import org.kie.api.runtime.KieSession;
 import org.kie.internal.io.ResourceFactory;
 import org.kie.internal.persistence.jpa.JPAKnowledgeService;
 import org.kie.internal.runtime.StatefulKnowledgeSession;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
 
 import javax.annotation.PostConstruct;
 import javax.persistence.Persistence;

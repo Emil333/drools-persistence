@@ -1,8 +1,8 @@
-import com.sam.drools.samdroolspersistence.model.TaxiRide;
-import com.sam.drools.samdroolspersistence.model.Fare;
+import com.tech.drools.droolspersistence.model.TaxiRide;
+import com.tech.drools.droolspersistence.model.Fare;
 import java.util.*;
 
-global com.sam.drools.samdroolspersistence.model.Fare rideFare;
+global com.tech.drools.droolspersistence.model.Fare rideFare;
 dialect  "mvel"
 
 rule "Calculate Taxi Fare - Scenario 1"

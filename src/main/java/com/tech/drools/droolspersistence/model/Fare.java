@@ -1,4 +1,4 @@
-package com.sam.drools.samdroolspersistence.model;
+package com.tech.drools.droolspersistence.model;
 
 import java.io.Serializable;
 

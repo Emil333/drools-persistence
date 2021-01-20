@@ -1,4 +1,4 @@
-package com.sam.drools.samdroolspersistence.entity;
+package com.tech.drools.droolspersistence.entity;
 
 import javax.persistence.*;
 

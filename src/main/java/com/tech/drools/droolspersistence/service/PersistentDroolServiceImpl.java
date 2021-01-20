@@ -1,4 +1,4 @@
-package com.sam.drools.samdroolspersistence.service;
+package com.tech.drools.droolspersistence.service;
 
 import org.kie.api.KieBase;
 import org.kie.api.KieServices;

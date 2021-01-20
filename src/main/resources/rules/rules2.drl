@@ -1,5 +1,5 @@
-package com.sam.drools.samdroolspersistence;
-import com.sam.drools.samdroolspersistence.model.Person;
+package com.tech.drools.droolspersistence;
+import com.tech.drools.droolspersistence.model.Person;
 
 rule "Person gender male"
 when

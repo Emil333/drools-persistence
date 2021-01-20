@@ -1,7 +1,7 @@
-package com.sam.drools.samdroolspersistence.service;
+package com.tech.drools.droolspersistence.service;
 
-import com.sam.drools.samdroolspersistence.entity.SessioninfoEntity;
-import com.sam.drools.samdroolspersistence.repository.DroolsSessionRepository;
+import com.tech.drools.droolspersistence.entity.SessioninfoEntity;
+import com.tech.drools.droolspersistence.repository.DroolsSessionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
