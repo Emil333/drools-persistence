@@ -92,12 +92,13 @@ public class PersistentDroolConfig {
     private void initDataSource() {
         PoolingDataSource ds = new PoolingDataSource();
         ds.setUniqueName(UNIQUE_NAME);
-        ds.setClassName("com.mysql.cj.jdbc.MysqlXADataSource");
+        ds.setClassName("bitronix.tm.resource.jdbc.lrc.LrcXADataSource");
         ds.setMaxPoolSize(3);
         ds.setAllowLocalTransactions(true);
-        ds.getDriverProperties().put("user", "root");
-        ds.getDriverProperties().put("password", "password");
-        ds.getDriverProperties().put("URL", "jdbc:mysql://localhost:3306/drools");
+//        ds.getDriverProperties().put("user", "root");
+//        ds.getDriverProperties().put("password", "password");
+        ds.getDriverProperties().put("url", "jdbc:ignite:thin://localhost:10800/");
+        ds.getDriverProperties().put("driverClassName", "org.apache.ignite.IgniteJdbcThinDriver");
         ds.init();
     }
 }
