@@ -5,7 +5,7 @@ import java.sql.Timestamp;
 import java.util.Arrays;
 
 @Entity
-@Table(name = "workiteminfo", schema = "drool_demo")
+@Table(name = "workiteminfo", schema = "public")
 public class WorkiteminfoEntity {
     private long workItemId;
     private Timestamp creationDate;

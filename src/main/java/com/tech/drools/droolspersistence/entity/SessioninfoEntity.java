@@ -5,7 +5,7 @@ import java.sql.Timestamp;
 import java.util.Arrays;
 
 @Entity
-@Table(name = "sessioninfo", schema = "drool_demo")
+@Table(name = "sessioninfo", schema = "public")
 public class SessioninfoEntity {
     private long id;
     private Timestamp lastModificationDate;

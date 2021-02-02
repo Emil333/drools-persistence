@@ -12,7 +12,7 @@
         <class>org.drools.persistence.processinstance.ProcessInstanceInfo</class>
         <class>org.drools.persistence.processinstance.ProcessInstanceEventInfo</class>
         <properties>
-            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
             <property name="hibernate.max_fetch_depth" value="3"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
             <property name="hibernate.show_sql" value="true"/>

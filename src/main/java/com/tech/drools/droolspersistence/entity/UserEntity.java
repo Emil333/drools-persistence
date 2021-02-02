@@ -3,7 +3,7 @@ package com.tech.drools.droolspersistence.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "user", schema = "drool_demo", catalog = "")
+@Table(name = "user", schema = "public", catalog = "")
 public class UserEntity {
     private int id;
     private String email;
