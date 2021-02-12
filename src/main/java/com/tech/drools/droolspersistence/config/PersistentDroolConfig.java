@@ -33,6 +33,7 @@ public class PersistentDroolConfig {
 //    @Autowired
 //    private ISessionService iSessionService;
 
+
     @PostConstruct
     private void init() {
         this.initDataSource();
@@ -47,7 +48,7 @@ public class PersistentDroolConfig {
         return session;
     }
 
-//    @Lazy
+    //    @Lazy
     @Bean
     public KieSession getPersistentKieSession() {
 
@@ -71,6 +72,7 @@ public class PersistentDroolConfig {
     public KieBase getKieBase() {
         KieFileSystem kieFileSystem = kieServices.newKieFileSystem();
         kieFileSystem.write(ResourceFactory.newClassPathResource(DRL_LOCATION));
+        //todo remove final if problem faced in rule templating
         KieRepository kieRepository = kieServices.getRepository();
 
         kieRepository.addKieModule(kieRepository::getDefaultReleaseId);
@@ -84,8 +86,11 @@ public class PersistentDroolConfig {
     @Bean
     public Environment getEnv() {
         Environment env = kieServices.newEnvironment();
-        env.set(EnvironmentName.ENTITY_MANAGER_FACTORY, Persistence.createEntityManagerFactory("org.drools.persistence.jpa"));
-        env.set(EnvironmentName.TRANSACTION_MANAGER, TransactionManagerServices.getTransactionManager());
+        env.set( EnvironmentName.ENTITY_MANAGER_FACTORY, Persistence.createEntityManagerFactory( "org.drools.persistence.jpa" ) );
+        env.set( EnvironmentName.TRANSACTION_MANAGER, TransactionManagerServices.getTransactionManager() );
+//        Environment env = kieServices.newEnvironment();
+//        env.set(EnvironmentName.ENTITY_MANAGER_FACTORY, Persistence.createEntityManagerFactory("org.drools.persistence.jpa"));
+//        env.set(EnvironmentName.TRANSACTION_MANAGER, TransactionManagerServices.getTransactionManager());
         return env;
     }
 
@@ -97,8 +102,9 @@ public class PersistentDroolConfig {
         ds.setAllowLocalTransactions(true);
 //        ds.getDriverProperties().put("user", "root");
 //        ds.getDriverProperties().put("password", "password");
-        ds.getDriverProperties().put("url", "jdbc:ignite:thin://localhost:10800/");
+        ds.getDriverProperties().put("url", "jdbc:ignite:thin://localhost/");
         ds.getDriverProperties().put("driverClassName", "org.apache.ignite.IgniteJdbcThinDriver");
         ds.init();
     }
+
 }
